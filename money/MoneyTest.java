@@ -15,6 +15,8 @@ public class MoneyTest {                            //MoneyTestクラスを作�
     public void testEquality() {                          //testEqualityメソッドを作成
         assertTrue(new Dollar(5).equals(new Dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
         assertFalse(new Dollar(5).equals(new Dollar(6))); //assertFalseメソッドで期待値と実際の値を比較
+        assertTrue(new Franc(5).equals(new Franc(5)));  //assertTrueメソッドで期待値と実際の値を比較
+        assertFalse(new Franc(5).equals(new Franc(6))); //assertFalseメソッドで期待値と実際の値を比較
     }
 }
 
