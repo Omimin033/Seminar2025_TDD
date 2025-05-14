@@ -1,15 +1,15 @@
-package money;                 //moneyパッケージを作成
+package money;  //moneyパッケージを作成
 
-public class Franc {
-    private int amount;                     //amountフィールドを作成
-    Franc(int amount) {            //コンストラクタを作成
-        this.amount = amount;       //引数のamountをフィールドに代入
+class Franc {
+    private int amount;         //amountフィールドを作成
+    Franc(int amount) {         //コンストラクタを作成
+        this.amount = amount;   //引数のamountをフィールドに代入
     }
     Franc times(int multiplier) {  //timesメソッドを作成
         return new Franc(amount * multiplier);  //新しいFrancオブジェクトを返す
     }
-    public boolean equals(Object object) {      //equalsメソッドをオーバーライド
-        Franc franc = (Franc) object;        //Object型をFranc型にキャスト
+    public boolean equals(Object object) {     //equalsメソッドをオーバーライド
+        Franc franc = (Franc) object;          //Object型をFranc型にキャスト
         return amount == franc.amount;         //amountフィールドを比較
     }
 }
