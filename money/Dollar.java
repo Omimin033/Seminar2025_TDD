@@ -10,6 +10,7 @@ class Dollar {                      //Dollarクラスを作成
     }
 
     public boolean equals(Object object) {      //equalsメソッドをオーバーライド
-        return true;  //無条件でtrueを返す
+        Dollar dollar = (Dollar) object;        //Object型をDollar型にキャスト
+        return amount == dollar.amount;         //amountフィールドを比較
     }
 }
