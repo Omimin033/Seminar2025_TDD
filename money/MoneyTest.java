@@ -12,4 +12,8 @@ public class MoneyTest {                            //MoneyTestクラスを作�
         product = five.times(3);         //timesメソッドを呼び出す
         assertEquals(15, product.amount);           //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testEquality() {                          //testEqualityメソッドを作成
+        assertTrue(new Dollar(5).equals(new Dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
+    }
 }
