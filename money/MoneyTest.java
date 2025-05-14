@@ -7,14 +7,34 @@ public class MoneyTest {                            //MoneyTestクラスを作�
     @Test                                           //テストメソッドを作成
     public void testMultiplication() {              //testMultiplicationメソッドを作成
         Dollar five = new Dollar(5);         //Dollarクラスのインスタンスを作成
-        Dollar product = five.times(2);  //timesメソッドを呼び出す
-        assertEquals(10, product.amount);           //assertEqualsメソッドで期待値と実際の値を比較
-        product = five.times(3);         //timesメソッドを呼び出す
-        assertEquals(15, product.amount);           //assertEqualsメソッドで期待値と実際の値を比較
-    }
+        // Dollar同士を比較していることをわかりやすくするために、assertEqualsの引数を変更
+        assertEquals(new Dollar(10), five.times(2));  //timesメソッドを呼び出す
+        assertEquals(new Dollar(15), five.times(3));  //timesメソッドを呼び出す
+        }
     @Test
     public void testEquality() {                          //testEqualityメソッドを作成
         assertTrue(new Dollar(5).equals(new Dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
         assertFalse(new Dollar(5).equals(new Dollar(6))); //assertFalseメソッドで期待値と実際の値を比較
     }
 }
+
+
+
+
+
+//　3章までのコード
+// public class MoneyTest {                            //MoneyTestクラスを作成
+//     @Test                                           //テストメソッドを作成
+//     public void testMultiplication() {              //testMultiplicationメソッドを作成
+//         Dollar five = new Dollar(5);         //Dollarクラスのインスタンスを作成
+//         Dollar product = five.times(2);  //timesメソッドを呼び出す
+//         assertEquals(10, product.amount);           //assertEqualsメソッドで期待値と実際の値を比較
+//         product = five.times(3);         //timesメソッドを呼び出す
+//         assertEquals(15, product.amount);           //assertEqualsメソッドで期待値と実際の値を比較
+//     }
+//     @Test
+//     public void testEquality() {                          //testEqualityメソッドを作成
+//         assertTrue(new Dollar(5).equals(new Dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
+//         assertFalse(new Dollar(5).equals(new Dollar(6))); //assertFalseメソッドで期待値と実際の値を比較
+//     }
+// }
