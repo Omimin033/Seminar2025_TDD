@@ -7,10 +7,6 @@ class Dollar extends Money {  //Dollarクラスを作成
     Dollar times(int multiplier) {  //timesメソッドを作成
         return new Dollar(amount * multiplier);  //新しいDollarオブジェクトを返す
     }
-    public boolean equals(Object object) {   //equalsメソッドをオーバーライド
-        Money money = (Money) object;        //Object型をDollar型にキャスト
-        return amount == money.amount;       //amountフィールドを比較
-    }
 }
 
 
