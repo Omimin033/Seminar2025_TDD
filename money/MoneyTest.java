@@ -18,6 +18,12 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertTrue(new Franc(5).equals(new Franc(5)));    //assertTrueメソッドで期待値と実際の値を比較
         assertFalse(new Franc(5).equals(new Franc(6)));   //assertFalseメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testFrancMultiplication() {              //testFrancMultiplicationメソッドを作成
+        Franc five = new Franc(5);         //Francクラスのインスタンスを作成
+        assertEquals(new Franc(10), five.times(2));  //timesメソッドを呼び出す
+        assertEquals(new Franc(15), five.times(3));  //timesメソッドを呼び出す
+    }
 }
 
 
