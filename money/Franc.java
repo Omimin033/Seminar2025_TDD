@@ -4,7 +4,7 @@ class Franc extends Money {  //Francクラスを作成
     Franc(int amount) {         //コンストラクタを作成
         this.amount = amount;   //引数のamountをフィールドに代入
     }
-    Franc times(int multiplier) {  //timesメソッドを作成
+    Money times(int multiplier) {  //timesメソッドを作成
         return new Franc(amount * multiplier);  //新しいFrancオブジェクトを返す
     }
 }
