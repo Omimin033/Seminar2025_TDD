@@ -15,15 +15,15 @@ public class MoneyTest {    //MoneyTestクラスを作成
     public void testEquality() {    //testEqualityメソッドを作成
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
         assertFalse(Money.dollar(5).equals(Money.dollar(6))); //assertFalseメソッドで期待値と実際の値を比較
-        assertTrue(new Franc(5).equals(new Franc(5)));    //assertTrueメソッドで期待値と実際の値を比較
-        assertFalse(new Franc(5).equals(new Franc(6)));   //assertFalseメソッドで期待値と実際の値を比較
-        assertFalse(new Franc(5).equals(Money.dollar(5)));   //assertFalseメソッドで期待値と実際の値を比較
+        assertTrue(Money.Franc(5).equals(Money.Franc(5)));    //assertTrueメソッドで期待値と実際の値を比較
+        assertFalse(Money.Franc(5).equals(Money.Franc(6)));   //assertFalseメソッドで期待値と実際の値を比較
+        assertFalse(Money.Franc(5).equals(Money.dollar(5)));   //assertFalseメソッドで期待値と実際の値を比較
     }
     @Test
     public void testFrancMultiplication() {              //testFrancMultiplicationメソッドを作成
-        Franc five = new Franc(5);         //Francクラスのインスタンスを作成
-        assertEquals(new Franc(10), five.times(2));  //timesメソッドを呼び出す
-        assertEquals(new Franc(15), five.times(3));  //timesメソッドを呼び出す
+        Money five = Money.Franc(5);         //Francクラスのインスタンスを作成
+        assertEquals(Money.Franc(10), five.times(2));  //timesメソッドを呼び出す
+        assertEquals(Money.Franc(15), five.times(3));  //timesメソッドを呼び出す
     }
 }
 
