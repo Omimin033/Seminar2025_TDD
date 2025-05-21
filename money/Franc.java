@@ -3,10 +3,10 @@ package money;  //moneyパッケージを作成
 class Franc extends Money {  //Francクラスを作成
     Franc(int amount, String currency) {         //コンストラクタを作成
         this.amount = amount;   //引数のamountをフィールドに代入
-        this.currency = "CHF";   //currencyフィールドを初期化
+        this.currency = currency;   //コンストラクタのパラメータをインスタンス変数に代入
     }
     Money times(int multiplier) {  //timesメソッドを作成
-        return new Franc(amount * multiplier, null);  //新しいFrancオブジェクトを返す
+        return Money.franc(amount * multiplier);  //新しいFrancオブジェクトを返す
     }
 }
 
