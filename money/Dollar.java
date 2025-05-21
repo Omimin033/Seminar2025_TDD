@@ -4,7 +4,7 @@ class Dollar extends Money {  //Dollarクラスを作成
     Dollar(int amount) {        //コンストラクタを作成
         this.amount = amount;   //引数のamountをフィールドに代入
     }
-    Dollar times(int multiplier) {  //timesメソッドを作成
+    Money times(int multiplier) {  //timesメソッドを作成
         return new Dollar(amount * multiplier);  //新しいDollarオブジェクトを返す
     }
 }
