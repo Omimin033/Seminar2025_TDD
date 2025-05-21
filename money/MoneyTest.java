@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;   //JUnit5のアサーショ�
 public class MoneyTest {    //MoneyTestクラスを作成
     @Test                                           //テストメソッドを作成
     public void testMultiplication() {              //testMultiplicationメソッドを作成
-        Dollar five = Money.Dollar(5);         //Dollarクラスのインスタンスを作成
+        Money five = Money.dollar(5);         //Dollarクラスのインスタンスを作成
         // Dollar同士を比較していることをわかりやすくするために、assertEqualsの引数を変更
         assertEquals(new Dollar(10), five.times(2));  //timesメソッドを呼び出す
         assertEquals(new Dollar(15), five.times(3));  //timesメソッドを呼び出す
