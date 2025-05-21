@@ -7,4 +7,7 @@ class Money {
         return amount == money.amount        //amountフィールドを比較
             && getClass().equals(money.getClass()); //クラスを比較
     }
+    static Dollar dollat (int amount) {  //staticメソッドを作成
+        return new Dollar(amount);          //新しいDollarオブジェクトを返す
+    }
 }
