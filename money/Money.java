@@ -16,7 +16,7 @@ abstract class Money {
         return new Dollar(amount);          //新しいDollarオブジェクトを返す
     }
     static Money franc (int amount) {  //staticメソッドを作成
-        return new Franc(amount);           //新しいFrancオブジェクトを返す
+        return new Franc(amount, null);           //新しいFrancオブジェクトを返す
     }
 }
 
