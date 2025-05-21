@@ -17,6 +17,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertFalse(new Dollar(5).equals(new Dollar(6))); //assertFalseメソッドで期待値と実際の値を比較
         assertTrue(new Franc(5).equals(new Franc(5)));    //assertTrueメソッドで期待値と実際の値を比較
         assertFalse(new Franc(5).equals(new Franc(6)));   //assertFalseメソッドで期待値と実際の値を比較
+        assertFalse(new Franc(5).equals(new Dollar(5)));   //assertFalseメソッドで期待値と実際の値を比較
     }
     @Test
     public void testFrancMultiplication() {              //testFrancMultiplicationメソッドを作成
