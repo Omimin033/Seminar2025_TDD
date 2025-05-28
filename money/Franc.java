@@ -5,7 +5,7 @@ class Franc extends Money {  //Francクラスを作成
         super(amount, currency);   //親クラスのコンストラクタを呼び出す
     }
     Money times(int multiplier) {  //timesメソッドを作成
-        return new Franc(amount * multiplier, "CHF");  //新しいFrancオブジェクトを返す
+        return new Franc(amount * multiplier, currency);  //新しいFrancオブジェクトを返す
     }
 }
 
