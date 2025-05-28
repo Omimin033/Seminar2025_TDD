@@ -18,6 +18,9 @@ class Money {
         return amount == money.amount        //amountフィールドを比較
             && getClass().equals(money.getClass()); //クラスを比較
     }
+    public String toString() {
+        return amount + " " + currency;  //amountとcurrencyを文字列として返す
+    }
     static Money dollar (int amount) {  //staticメソッドを作成
         return new Dollar(amount, "USD");          //新しいDollarオブジェクトを返す
     }
