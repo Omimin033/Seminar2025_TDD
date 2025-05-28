@@ -1,12 +1,12 @@
 package money;  //moneyパッケージを作成
 
 class Dollar extends Money {  //Dollarクラスを作成
-    Dollar(int amount) {        //コンストラクタを作成
+    Dollar(int amount, String currency) {        //コンストラクタを作成
         this.amount = amount;   //引数のamountをフィールドに代入
-        currency = "USD";   //currencyフィールドを初期化
+        this.currency = currency;   //currencyフィールドを初期化
     }
     Money times(int multiplier) {  //timesメソッドを作成
-        return new Dollar(amount * multiplier);  //新しいDollarオブジェクトを返す
+        return Money.dollar(amount * multiplier); //新しいDollarオブジェクトを返す
     }
 }
 
