@@ -2,8 +2,7 @@ package money;  //moneyパッケージを作成
 
 class Franc extends Money {  //Francクラスを作成
     Franc(int amount, String currency) {         //コンストラクタを作成
-        this.amount = amount;   //引数のamountをフィールドに代入
-        this.currency = currency;   //コンストラクタのパラメータをインスタンス変数に代入
+        super(amount, currency);   //親クラスのコンストラクタを呼び出す
     }
     Money times(int multiplier) {  //timesメソッドを作成
         return Money.franc(amount * multiplier);  //新しいFrancオブジェクトを返す

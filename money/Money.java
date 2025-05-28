@@ -3,6 +3,10 @@ package money;
 abstract class Money {
     protected int amount;   //サブクラスでアクセスできるようにprotected修飾子を付ける
     protected String currency;  //currencyフィールドを作成
+    Money(int amount, String currency) {  //コンストラクタを作成
+        this.amount = amount;   //引数のamountをフィールドに代入
+        this.currency = currency;   //currencyフィールドを初期化
+    }
     abstract Money times(int multiplier);    //抽象メソッドを作成
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
