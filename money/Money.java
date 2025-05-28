@@ -8,7 +8,7 @@ class Money {
         this.currency = currency;   //currencyフィールドを初期化
     }
     Money times(int multiplier) {
-        return null;
+        return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
