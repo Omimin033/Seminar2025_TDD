@@ -1,20 +1,22 @@
 package money;
 
-abstract class Money {
+class Money {
     protected int amount;   //サブクラスでアクセスできるようにprotected修飾子を付ける
     protected String currency;  //currencyフィールドを作成
     Money(int amount, String currency) {  //コンストラクタを作成
         this.amount = amount;   //引数のamountをフィールドに代入
         this.currency = currency;   //currencyフィールドを初期化
     }
-    abstract Money times(int multiplier);    //抽象メソッドを作成
+    Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
+    }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
     }
     public boolean equals(Object object) {   //equalsメソッドをオーバーライド
         Money money = (Money) object;        //Object型をDollar型にキャスト
         return amount == money.amount        //amountフィールドを比較
-            && getClass().equals(money.getClass()); //クラスを比較
+            && currency().equals(money.currency()); //クラスを比較
     }
     static Money dollar (int amount) {  //staticメソッドを作成
         return new Dollar(amount, "USD");          //新しいDollarオブジェクトを返す
