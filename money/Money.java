@@ -16,9 +16,9 @@ class Money {
     public boolean equals(Object object) {   //equalsメソッドをオーバーライド
         Money money = (Money) object;        //Object型をDollar型にキャスト
         return amount == money.amount        //amountフィールドを比較
-            && getClass().equals(money.getClass()); //クラスを比較
+            && currency().equals(money.currency()); //クラスを比較
     }
-            static Money dollar (int amount) {  //staticメソッドを作成
+    static Money dollar (int amount) {  //staticメソッドを作成
         return new Dollar(amount, "USD");          //新しいDollarオブジェクトを返す
     }
     static Money franc (int amount) {  //staticメソッドを作成
