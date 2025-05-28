@@ -5,9 +5,19 @@ class Franc extends Money {  //Francクラスを作成
         super(amount, currency);   //親クラスのコンストラクタを呼び出す
     }
     Money times(int multiplier) {  //timesメソッドを作成
-        return Money.franc(amount * multiplier);  //新しいFrancオブジェクトを返す
+        return new Franc(amount * multiplier, "CHF");  //新しいFrancオブジェクトを返す
     }
 }
+
+// ９章までのコード
+// class Franc extends Money {  //Francクラスを作成
+//     Franc(int amount, String currency) {         //コンストラクタを作成
+//         super(amount, currency);   //親クラスのコンストラクタを呼び出す
+//     }
+//     Money times(int multiplier) {  //timesメソッドを作成
+//         return Money.franc(amount * multiplier);  //新しいFrancオブジェクトを返す
+//     }
+// }
 
 // 9章途中までのコード
 // class Franc extends Money {  //Francクラスを作成

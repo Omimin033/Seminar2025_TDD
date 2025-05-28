@@ -5,9 +5,19 @@ class Dollar extends Money {  //Dollarクラスを作成
         super(amount, currency);   //親クラスのコンストラクタを呼び出す
     }
     Money times(int multiplier) {  //timesメソッドを作成
-        return Money.dollar(amount * multiplier); //新しいDollarオブジェクトを返す
+        return new Dollar(amount * multiplier, "USD"); //新しいDollarオブジェクトを返す
     }
 }
+
+// ９章までのコード
+// class Dollar extends Money {  //Dollarクラスを作成
+//     Dollar(int amount, String currency) {        //コンストラクタを作成
+//         super(amount, currency);   //親クラスのコンストラクタを呼び出す
+//     }
+//     Money times(int multiplier) {  //timesメソッドを作成
+//         return Money.dollar(amount * multiplier); //新しいDollarオブジェクトを返す
+//     }
+// }
 
 // ９章途中までのコード
 // class Dollar extends Money {  //Dollarクラスを作成
