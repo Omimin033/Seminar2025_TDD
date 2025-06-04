@@ -45,6 +45,12 @@ public class MoneyTest {    //MoneyTestクラスを作成
         Money result = bank.reduce(sum, "USD");  //銀行のreduceメソッドを呼び出す
         assertEquals(Money.dollar(7), result);  //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testReduceMoney() {
+        Bank bank = new Bank();  //Bankクラスのインスタンスを作成
+        Money result = bank.reduce(Money.dollar(1), "USD");  //銀行のreduceメソッドを呼び出す
+        assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 
