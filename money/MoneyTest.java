@@ -30,6 +30,14 @@ public class MoneyTest {    //MoneyTestクラスを作成
         Money reduced = bank.reduce(sum, "USD");  //銀行のreduceメソッドを呼び出す
         assertEquals(Money.dollar(10), reduced);  //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testPlusReturnsSum() {
+        Money five = Money.dollar(5);  //Dollarクラスのインスタンスを作成
+        Expression result = five.plus(five);  //plusメソッドを呼び出す
+        Sum sum = (Sum) result;  //Expression型をSum型にキャスト
+        assertEquals(five, sum.augend);  //assertEqualsメソッドで期待値と実際の値を比較
+        assertEquals(five, sum.addend);   //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 
