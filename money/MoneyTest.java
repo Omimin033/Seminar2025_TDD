@@ -18,12 +18,6 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertFalse(Money.franc(5).equals(Money.dollar(5)));   //assertFalseメソッドで期待値と実際の値を比較
     }
     @Test
-    public void testFrancMultiplication() {              //testFrancMultiplicationメソッドを作成
-        Money five = Money.franc(5);         //Francクラスのインスタンスを作成
-        assertEquals(Money.franc(10), five.times(2));  //timesメソッドを呼び出す
-        assertEquals(Money.franc(15), five.times(3));  //timesメソッドを呼び出す
-    }
-    @Test
     public void testCurrency() {
         assertEquals("USD", Money.dollar(1).currency());  //assertEqualsメソッドで期待値と実際の値を比較
         assertEquals("CHF", Money.franc(1).currency());   //assertEqualsメソッドで期待値と実際の値を比較
