@@ -38,6 +38,13 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertEquals(five, sum.augend);  //assertEqualsメソッドで期待値と実際の値を比較
         assertEquals(five, sum.addend);   //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testReduceSum() {
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));  //Sumクラスのインスタンスを作成
+        Bank bank = new Bank();  //Bankクラスのインスタンスを作成
+        Money result = bank.reduce(sum, "USD");  //銀行のreduceメソッドを呼び出す
+        assertEquals(Money.dollar(7), result);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 
