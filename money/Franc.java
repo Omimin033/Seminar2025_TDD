@@ -1,10 +1,11 @@
-package money;  //moneyパッケージを作成
+// 11章までのコード
+// package money;  //moneyパッケージを作成
 
-class Franc extends Money {  //Francクラスを作成
-    Franc(int amount, String currency) {         //コンストラクタを作成
-        super(amount, currency);   //親クラスのコンストラクタを呼び出す
-    }
-}
+// class Franc extends Money {  //Francクラスを作成
+//     Franc(int amount, String currency) {         //コンストラクタを作成
+//         super(amount, currency);   //親クラスのコンストラクタを呼び出す
+//     }
+// }
 
 // ９章までのコード
 // class Franc extends Money {  //Francクラスを作成
