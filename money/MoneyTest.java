@@ -22,6 +22,14 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertEquals("USD", Money.dollar(1).currency());  //assertEqualsメソッドで期待値と実際の値を比較
         assertEquals("CHF", Money.franc(1).currency());   //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testSimpleAddition() {
+        Money five = Money.dollar(5);  //Dollarクラスのインスタンスを作成
+        Expression sum = five.plus(five);  //plusメソッドを呼び出す
+        Bank bank = new Bank();  //Bankクラスのインスタンスを作成
+        Money reduced = bank.reduce(sum, "USD");  //銀行のreduceメソッドを呼び出す
+        assertEquals(Money.dollar(10), reduced);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 

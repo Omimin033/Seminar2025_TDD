@@ -1,6 +1,6 @@
 package money;
 
-class Money {
+class Money implements Expression {  //Moneyクラスを作成し、Expressionインターフェースを実装
     protected int amount;   //サブクラスでアクセスできるようにprotected修飾子を付ける
     protected String currency;  //currencyフィールドを作成
     Money(int amount, String currency) {  //コンストラクタを作成
@@ -9,6 +9,9 @@ class Money {
     }
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
+    }
+    Expression plus(Money addend) {  //plusメソッドを作成
+        return new Money(amount + addend.amount, currency);  //新しいMoneyオブジェクトを返す
     }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
