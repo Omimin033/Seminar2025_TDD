@@ -19,10 +19,10 @@ class Money {
             && currency().equals(money.currency()); //クラスを比較
     }
     static Money dollar (int amount) {  //staticメソッドを作成
-        return new Dollar(amount, "USD");          //新しいDollarオブジェクトを返す
+        return new Money(amount, "USD");          //新しいDollarオブジェクトを返す
     }
     static Money franc (int amount) {  //staticメソッドを作成
-        return new Franc(amount, "CHF");       //新しいFrancオブジェクトを返す //Factory Methodから文字列CHFを渡す
+        return new Money(amount, "CHF");       //新しいFrancオブジェクトを返す //Factory Methodから文字列CHFを渡す
     }
 }
 
