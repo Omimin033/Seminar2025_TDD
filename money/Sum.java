@@ -1,6 +1,8 @@
 package money;
 
-public class Sum {
+class Sum implements Expression {  //Sumクラスを作成し、Expressionインターフェースを実装
     Money augend;  //加算される金額
     Money addend;  //加算する金額
+    Sum(Money augend, Money addend) {  //コンストラクタを作成
+    }
 }
