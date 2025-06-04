@@ -1,6 +1,6 @@
 package money;
 
-class Money {
+class Money implements Expression {  //Moneyクラスを作成し、Expressionインターフェースを実装
     protected int amount;   //サブクラスでアクセスできるようにprotected修飾子を付ける
     protected String currency;  //currencyフィールドを作成
     Money(int amount, String currency) {  //コンストラクタを作成
