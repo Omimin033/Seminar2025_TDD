@@ -24,7 +24,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
     }
     @Test
     public void testSimpleAddition() {
-        Money sum = Money.dollar(5).plus(Money.dollar(5));  //plusメソッドを呼び出す
+        Money five = Money.dollar(5);  //Dollarクラスのインスタンスを作成
         Expression sum = five.plus(five);  //plusメソッドを呼び出す
         Bank bank = new Bank();  //Bankクラスのインスタンスを作成
         Money reduced = bank.reduce(sum, "USD");  //銀行のreduceメソッドを呼び出す
