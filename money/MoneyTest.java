@@ -25,7 +25,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
     @Test
     public void testSimpleAddition() {
         Money sum = Money.dollar(5).plus(Money.dollar(5));  //plusメソッドを呼び出す
-        assertEquals(Money.dollar(10), sum);  //assertEqualsメソッドで期待値と実際の値を比較
+        assertEquals(Money.dollar(10), reduced);  //assertEqualsメソッドで期待値と実際の値を比較
     }
 }
 
