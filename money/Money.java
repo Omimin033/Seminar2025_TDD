@@ -10,6 +10,9 @@ class Money {
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
+    Money plus(Money addend) {  //plusメソッドを作成
+        return new Money(amount + addend.amount, currency);  //新しいMoneyオブジェクトを返す
+    }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
     }

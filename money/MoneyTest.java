@@ -22,6 +22,11 @@ public class MoneyTest {    //MoneyTestクラスを作成
         assertEquals("USD", Money.dollar(1).currency());  //assertEqualsメソッドで期待値と実際の値を比較
         assertEquals("CHF", Money.franc(1).currency());   //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testSimpleAddition() {
+        Money sum = Money.dollar(5).plus(Money.dollar(5));  //plusメソッドを呼び出す
+        assertEquals(Money.dollar(10), sum);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 
