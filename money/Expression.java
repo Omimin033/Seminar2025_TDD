@@ -1,4 +1,5 @@
 package money;
 
-interface Expression {    
+interface Expression {
+    Money reduce(String to);  //Expressionインターフェースにreduceメソッドを定義
 }

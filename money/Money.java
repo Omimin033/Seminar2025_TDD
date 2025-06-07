@@ -11,7 +11,10 @@ class Money implements Expression {  //Moneyクラスを作成し、Expression�
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
     Expression plus(Money addend) {  //plusメソッドを作成
-        return new Money(amount + addend.amount, currency);  //新しいMoneyオブジェクトを返す
+        return new Sum(this, addend);  //新しいSumオブジェクトを返す
+    }
+    public Money reduce(String to) {  //reduceメソッドを作成
+        return this;  //Moneyオブジェクトをそのまま返す
     }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す
