@@ -7,6 +7,9 @@ class Sum implements Expression {  //Sumクラスを作成し、Expressionイン
         this.augend = augend;  //引数のaugendをフィールドに代入
         this.addend = addend;  //引数のaddendをフィールドに代入
     }
+    Expression times(int multiplier) {  //timesメソッドを実装
+        return new Sum(augend.times(multiplier), addend.times(multiplier));  //新しいSumオブジェクトを返す
+    }
     public Expression plus(Expression addend) {  //plusメソッドを実装
         return new Sum(this, addend);  //新しいSumオブジェクトを返す
     }
