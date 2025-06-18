@@ -12,6 +12,6 @@ class Bank {
         rates.put(new Pair(from, to), rate);    //為替レートをMapに追加
     }
     int rate(String from, String to) {
-        return (from.equals("CHF") && to.equals("USD")) ? 2 : 1;  //為替レートを設定
+        return rates.get(new Pair(from, to));   //為替レートを取得
     }
 }
