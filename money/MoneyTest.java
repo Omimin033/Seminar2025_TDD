@@ -60,7 +60,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
     }
     @Test
     public void testArrayEquals() {
-        assertTrue(((new Object[] { "abc" }).equals(new Object[] {"abc"})));  //配列のequalsメソッドをテスト
+        assertTrue(((new Object[] {"abc"}).equals(new Object[] {"abc"})));  //配列のequalsメソッドをテスト
     }
 }
 
