@@ -58,6 +58,10 @@ public class MoneyTest {    //MoneyTestクラスを作成
         Money result = bank.reduce(Money.franc(2), "USD");  //銀行のreduceメソッドを呼び出す
         assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testArrayEquals() {
+        assertTrue(((new Object[] { "abc" }).equals(new Object[] {"abc"})));  //配列のequalsメソッドをテスト
+    }
 }
 
 
