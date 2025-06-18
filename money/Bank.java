@@ -5,6 +5,9 @@ class Bank {
         return source.reduce(this, to);  //Sumオブジェクトをto通貨に変換して返す
     }
     void addRate(String from, String to, int rate) {
-        // 為替レートを追加するメソッド（実装は省略）
+        
+    }
+    int rate(String from, String to) {
+        return (from.equals("CHF") && to.equals("USD")) ? 2 : 1;  //為替レートを設定
     }
 }

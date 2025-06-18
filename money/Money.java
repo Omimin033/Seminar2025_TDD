@@ -14,7 +14,7 @@ class Money implements Expression {  //Moneyクラスを作成し、Expression�
         return new Sum(this, addend);  //新しいSumオブジェクトを返す
     }
     public Money reduce(Bank bank, String to) {  //reduceメソッドを作成
-        int rate = (currency.equals("CHF") && to.equals("USD")) ? 2 : 1;  //為替レートを設定
+        int rate = bank.rate(currency, to);  //為替レートを取得
         return new Money(amount / rate, to);  //新しいMoneyオブジェクトを返す
     }
     String currency() {  //currencyメソッドをオーバーライド
