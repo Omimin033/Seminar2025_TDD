@@ -7,7 +7,7 @@ class Money implements Expression {  //Moneyクラスを作成し、Expression�
         this.amount = amount;   //引数のamountをフィールドに代入
         this.currency = currency;   //currencyフィールドを初期化
     }
-    Expression times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
     public Expression plus(Expression addend) {  //plusメソッドを作成
