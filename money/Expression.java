@@ -1,5 +1,5 @@
 package money;
 
 interface Expression {
-    Money reduce(String to);  //Expressionインターフェースにreduceメソッドを定義
+    Money reduce(Bank bank,  String to);  // Expressionインターフェースにreduceメソッドを追加
 }
