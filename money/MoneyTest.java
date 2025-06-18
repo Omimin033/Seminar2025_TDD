@@ -10,7 +10,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
         // Dollar同士を比較していることをわかりやすくするために、assertEqualsの引数を変更
         assertEquals(Money.dollar(10), five.times(2));  //timesメソッドを呼び出す
         assertEquals(Money.dollar(15), five.times(3));  //timesメソッドを呼び出す
-        }
+    }
     @Test
     public void testEquality() {    //testEqualityメソッドを作成
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
