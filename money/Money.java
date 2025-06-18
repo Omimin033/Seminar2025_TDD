@@ -7,14 +7,15 @@ class Money implements Expression {  //Moneyクラスを作成し、Expression�
         this.amount = amount;   //引数のamountをフィールドに代入
         this.currency = currency;   //currencyフィールドを初期化
     }
-    Money times(int multiplier) {
+    Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
-    Expression plus(Money addend) {  //plusメソッドを作成
+    public Expression plus(Expression addend) {  //plusメソッドを作成
         return new Sum(this, addend);  //新しいSumオブジェクトを返す
     }
-    public Money reduce(String to) {  //reduceメソッドを作成
-        return this;  //Moneyオブジェクトをそのまま返す
+    public Money reduce(Bank bank, String to) {  //reduceメソッドを作成
+        int rate = bank.rate(currency, to);  //為替レートを取得
+        return new Money(amount / rate, to);  //新しいMoneyオブジェクトを返す
     }
     String currency() {  //currencyメソッドをオーバーライド
         return currency;    //通貨を返す

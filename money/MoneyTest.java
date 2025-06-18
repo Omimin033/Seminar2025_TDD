@@ -10,7 +10,7 @@ public class MoneyTest {    //MoneyTestクラスを作成
         // Dollar同士を比較していることをわかりやすくするために、assertEqualsの引数を変更
         assertEquals(Money.dollar(10), five.times(2));  //timesメソッドを呼び出す
         assertEquals(Money.dollar(15), five.times(3));  //timesメソッドを呼び出す
-        }
+    }
     @Test
     public void testEquality() {    //testEqualityメソッドを作成
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));  //assertTrueメソッドで期待値と実際の値を比較
@@ -50,6 +50,26 @@ public class MoneyTest {    //MoneyTestクラスを作成
         Bank bank = new Bank();  //Bankクラスのインスタンスを作成
         Money result = bank.reduce(Money.dollar(1), "USD");  //銀行のreduceメソッドを呼び出す
         assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank = new Bank();  //Bankクラスのインスタンスを作成
+        bank.addRate("CHF", "USD", 2);  //為替レートを追加
+        Money result = bank.reduce(Money.franc(2), "USD");  //銀行のreduceメソッドを呼び出す
+        assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD", "USD")); //assertEqualsメソッドで期待値と実際の値を比較
+    }
+    @Test
+    public void testMixedAddition() {
+        Expression fiveBucks = Money.dollar(5);
+        Expression tenFrancs = Money.franc(10);
+        Bank bank = new Bank();
+        bank.addRate("CHF", "USD", 2);
+        Money result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+        assertEquals(Money.dollar(10), result);
     }
 }
 
