@@ -1,6 +1,10 @@
 package money;
 
+import java.util.Map;   //Mapをインポート
+import java.util.HashMap;   //HashMapをインポート
+
 class Bank {
+    private Map<Pair, Integer> rates = new HashMap<>();  //為替レートを格納するMapを作成
     Money reduce(Expression source, String to) {
         return source.reduce(this, to);  //Sumオブジェクトをto通貨に変換して返す
     }
