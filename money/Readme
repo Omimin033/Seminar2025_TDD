@@ -11,7 +11,7 @@ TODO　リスト（新）
 ☑ Bank.reduce(Money)
 ☑ Moneyを変換して換算を行う
 ☑ Reduce(Bank, String to)
-□ Sum.plus
+☑ Sum.plus
 □ Expression.times
 
 ----------------------------------------------------------------------
