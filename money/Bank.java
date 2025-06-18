@@ -12,6 +12,7 @@ class Bank {
         rates.put(new Pair(from, to), rate);    //為替レートをMapに追加
     }
     int rate(String from, String to) {
+    if (from.equals(to)) return 1;   //同じ通貨の場合は1を返す
         return rates.get(new Pair(from, to));   //為替レートを取得
     }
 }
