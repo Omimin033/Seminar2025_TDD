@@ -51,6 +51,13 @@ public class MoneyTest {    //MoneyTestクラスを作成
         Money result = bank.reduce(Money.dollar(1), "USD");  //銀行のreduceメソッドを呼び出す
         assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
     }
+    @Test
+    public void testReduceMoneyDifferentCurrency() {
+        Bank bank = new Bank();  //Bankクラスのインスタンスを作成
+        bank.addRate("CHF", "USD", 2);  //為替レートを追加
+        Money result = bank.reduce(Money.franc(2), "USD");  //銀行のreduceメソッドを呼び出す
+        assertEquals(Money.dollar(1), result);  //assertEqualsメソッドで期待値と実際の値を比較
+    }
 }
 
 
