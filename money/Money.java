@@ -10,7 +10,7 @@ class Money implements Expression {  //Moneyクラスを作成し、Expression�
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);  //新しいMoneyオブジェクトを返す
     }
-    Expression plus(Money addend) {  //plusメソッドを作成
+    Expression plus(Expression addend) {  //plusメソッドを作成
         return new Sum(this, addend);  //新しいSumオブジェクトを返す
     }
     public Money reduce(Bank bank, String to) {  //reduceメソッドを作成
