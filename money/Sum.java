@@ -7,6 +7,9 @@ class Sum implements Expression {  //Sumクラスを作成し、Expressionイン
         this.augend = augend;  //引数のaugendをフィールドに代入
         this.addend = addend;  //引数のaddendをフィールドに代入
     }
+    public Expression plus(Expression addend) {  //plusメソッドを実装
+        return null;  //Sumクラスではplusメソッドを実装しないのでnullを返す
+    }
     public Money reduce(Bank bank, String to) { // reduceメソッドを実装
         int amount = augend.reduce(bank, to).amount
         + addend.reduce(bank, to).amount;   //augendとaddendをto通貨に変換して合計金額を計算
